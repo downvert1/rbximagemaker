@@ -30,12 +30,10 @@ width1, height1 = image.size
 
 print(width1, height1)
 
-# Prototype local variables
 pixels = []
 width, height = 0, 0
 blob = None
 
-# Lets create a generic pixel class for easy color management
 class MyPixel(object):
     red = 0
     green = 0
@@ -47,9 +45,7 @@ class MyPixel(object):
     def __repr__(self):
         return u'#{0.red:02X}{0.green:02X}{0.blue:02X}'.format(self)
 
-# Extend wand.image.Image and add a new `img.pixels` pseudo-attribute
 class MyImage(Image):
-    # Repeat above example
     @property
     def pixels(self):
         pixels = []
@@ -62,7 +58,6 @@ class MyImage(Image):
             pixels.append(pixel)
         return pixels
 
-# Call your custom class; which, collects your custom pixels
 with MyImage(filename=os.path.join("Images", str(fileName))) as img:
     with open(os.path.join("Data(ignore)", f"hextlist_{str(fileName).replace('.png', '')}.txt"),'w') as file:
         for hex in img.pixels:
