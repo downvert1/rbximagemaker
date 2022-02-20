@@ -1,7 +1,7 @@
 Step 1: Enter your exploit's workspace path into config.json
 Step 2: Download: https://download.imagemagick.org/ImageMagick/download/binaries/ImageMagick-7.1.0-22-Q16-HDRI-x64-dll.exe
 Step 3: run install.bat
-Step 4: Run bot.py
+Step 4: Run main.py
 
 
 PUT ANY IMAGES YOU WANT TO CONVERT INTO Images folder
